@@ -1,0 +1,70 @@
+/* src/main/resources/static/css/style.css */
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent-1:#0ea5a4; /* teal */
+  --accent-2:#7c3aed; /* purple */
+  --price:#059669; /* green */
+}
+
+body{
+  background: linear-gradient(180deg, var(--bg) 0%, #eef6ff 100%);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+}
+
+.header-card{
+  background: linear-gradient(90deg, rgba(124,58,237,0.95), rgba(14,165,164,0.95));
+  color: white;
+  padding: 28px 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15,23,42,0.08);
+  margin-bottom: 22px;
+}
+
+.header-card h1{ margin:0; font-size:1.8rem; font-weight:700; }
+.header-card p{ margin:6px 0 0; opacity:0.95; }
+
+.search-row{ display:flex; gap:12px; margin-top:12px; }
+.search-row .form-control{ flex:1; }
+
+.list-wrapper{ margin-top: 8px; }
+.item-card{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.item-card + .item-card{ margin-top:12px; }
+.item-card:hover{ transform: translateY(-6px); box-shadow: 0 14px 30px rgba(2,6,23,0.08); }
+
+.item-card img{ width:110px; height:80px; object-fit:cover; border-radius:8px; border:2px solid rgba(15,23,42,0.03); }
+.item-content{ flex:1; }
+.item-content h5{ margin:0; font-size:1.05rem; font-weight:700; color:#0f172a; }
+.item-content p{ margin:6px 0 0; color:var(--muted); }
+.price{ font-weight:800; color:var(--price); font-size:1.05rem; min-width:80px; text-align:right; }
+
+@media (max-width:576px){
+  .item-card{ flex-direction:row; gap:10px; }
+  .item-card img{ width:84px; height:64px; }
+  .header-card h1{ font-size:1.35rem; }
+}
+
+/* small accent ribbon */
+.ribbon{
+  display:inline-block;
+  background: rgba(255,255,255,0.12);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:600;
+  margin-left:8px;
+  font-size:0.9rem;
+}
+
+.footer-note{ color:var(--muted); font-size:0.9rem; margin-top:18px; }
