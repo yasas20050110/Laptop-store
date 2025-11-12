@@ -1,28 +1,60 @@
 package com.soul.laptopkade.controller;
 
+import com.soul.laptopkade.model.Laptop;
+import com.soul.laptopkade.repository.LaptopRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 @Controller
 public class HomeController {
 
-    // Small record to represent a laptop for the demo
-    public record Laptop(String name, String brand, String price, String imageUrl) { }
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private final LaptopRepository laptopRepository;
+
+    public HomeController(LaptopRepository laptopRepository) {
+        this.laptopRepository = laptopRepository;
+    }
 
     @GetMapping({"/", "/home"})
     public String home(Model model) {
-        List<Laptop> laptops = List.of(
-                new Laptop("XPS 13", "Dell", "$999", "/images/laptops/laptop_183544.jpg"),
-                new Laptop("MacBook Air", "Apple", "$1199", "/images/laptops/pexels-junior-teixeira-1064069-2047905.jpg"),
-                new Laptop("ThinkPad X1", "Lenovo", "$1299", "/images/laptops/pexels-life-of-pix-7974.jpg"),
-                new Laptop("Pavilion 15", "HP", "$849", "/images/laptops/pexels-pixabay-459653.jpg")
-        );
-
+        try {
+            logger.info("READ operation: Fetching all laptops from database");
+        List<Laptop> laptops = laptopRepository.findAll();
+            logger.info("READ operation successful: Retrieved {} laptops", laptops.size());
         model.addAttribute("laptops", laptops);
         return "home"; // maps to src/main/resources/templates/home.html
+        } catch (Exception e) {
+            logger.error("READ operation failed: Error fetching laptops", e);
+            throw e;
+        }
+    }
+
+    @GetMapping("/search")
+    public String search(@RequestParam(value = "query", defaultValue = "") String query, Model model) {
+        try {
+            logger.info("SEARCH operation: Searching for laptops with query: '{}'", query);
+            List<Laptop> results;
+            
+            if (query.isEmpty()) {
+                results = laptopRepository.findAll();
+            } else {
+                results = laptopRepository.searchByNameOrBrand(query);
+            }
+            
+            logger.info("SEARCH operation successful: Found {} laptops matching '{}'", results.size(), query);
+            model.addAttribute("laptops", results);
+            model.addAttribute("query", query);
+                return "search-results :: laptop-list";
+        } catch (Exception e) {
+            logger.error("SEARCH operation failed: Error during search for '{}'", query, e);
+            throw e;
+        }
     }
 
 }

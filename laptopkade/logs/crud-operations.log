@@ -1,0 +1,8 @@
+2025-11-12 17:32:27.904 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-12 17:32:27.942 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-12 17:32:36.469 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'x'
+2025-11-12 17:32:36.511 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 2 laptops matching 'x'
+2025-11-12 17:32:41.637 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'xp'
+2025-11-12 17:32:41.642 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 1 laptops matching 'xp'
+2025-11-12 17:32:44.065 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'xps'
+2025-11-12 17:32:44.070 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 1 laptops matching 'xps'

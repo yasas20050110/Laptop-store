@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="laptop-list">
+    <div th:each="laptop : ${laptops}" class="item-card" role="button">
+        <img th:src="@{${laptop.imageUrl}}" alt="Laptop Image">
+        <div class="item-content">
+            <h5 th:text="${laptop.name}">Laptop Name</h5>
+            <p class="mb-1" th:text="${laptop.brand}">Brand</p>
+        </div>
+        <div class="price" th:text="${laptop.price}">$0</div>
+    </div>
+    <div th:if="${#lists.isEmpty(laptops)}" class="alert alert-info mt-3">
+        No laptops found matching your search.
+    </div>
+</div>
+</body>
+</html>
