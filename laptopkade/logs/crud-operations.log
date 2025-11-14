@@ -18,3 +18,21 @@
 2025-11-14 13:40:29.576 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
 2025-11-14 13:41:42.399 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
 2025-11-14 13:41:42.402 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 13:45:16.175 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 13:45:16.203 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 13:45:34.773 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 13:45:34.776 [http-nio-8085-exec-2] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 13:45:36.046 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 13:45:36.050 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 13:52:26.835 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'pavi'
+2025-11-14 13:52:26.849 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 1 laptops matching 'pavi'
+2025-11-14 14:06:09.256 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:06:09.299 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:06:16.650 [http-nio-8085-exec-7] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=15AA64F402B19B4FF5E7B7D4650FF1D5)
+2025-11-14 14:06:16.663 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:06:16.666 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:06:48.106 [http-nio-8085-exec-4] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=15AA64F402B19B4FF5E7B7D4650FF1D5)
+2025-11-14 14:06:48.113 [http-nio-8085-exec-5] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:06:48.118 [http-nio-8085-exec-5] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:08:16.618 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'chec'
+2025-11-14 14:08:16.649 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 0 laptops matching 'chec'

@@ -38,6 +38,13 @@
             <div class="mt-3 mt-md-0 text-md-end">
                 <small class="d-block">Open now</small>
                 <small class="d-block">Free shipping over $500</small>
+                <!-- Cart / Checkout button visible to all users -->
+                <div class="d-inline-block mb-2">
+                    <a class="btn btn-outline-light btn-sm me-2" th:href="@{/cart}">
+                        🛒 Cart
+                        <span class="badge bg-light text-dark ms-2" th:text="${session.cart != null ? #maps.size(session.cart) : 0}">0</span>
+                    </a>
+                </div>
                 <div sec:authorize="hasRole('ADMIN')">
                     <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/laptops/new}">+ Add Laptop</a>
                     <small class="d-block text-white mt-2" style="opacity: 0.9;">
@@ -54,13 +61,20 @@
     <div class="row">
         <div class="col-12">
                 <div id="laptop-list" class="list-wrapper">
-                <div th:each="laptop : ${laptops}" class="item-card" role="button">
+                <div th:each="laptop : ${laptops}" class="item-card">
                     <img th:src="@{${laptop.imageUrl}}" alt="Laptop Image">
                     <div class="item-content">
                         <h5 th:text="${laptop.name}">Laptop Name</h5>
                         <p class="mb-1" th:text="${laptop.brand}">Brand</p>
                     </div>
-                    <div class="price" th:text="${laptop.price}">$0</div>
+                    <div style="min-width:140px; text-align:right;">
+                        <div class="price" th:text="${laptop.price}">$0</div>
+                        <form th:action="@{/cart/add}" method="post" style="margin-top:8px;">
+                            <input type="hidden" name="laptopId" th:value="${laptop.id}" />
+                            <input type="hidden" name="quantity" value="1" />
+                            <button type="submit" class="btn btn-sm btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-note">Showing <span id="count" th:text="${#lists.size(laptops)}">0</span> laptops</div>
