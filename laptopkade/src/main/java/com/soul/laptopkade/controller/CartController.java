@@ -2,7 +2,12 @@ package com.soul.laptopkade.controller;
 
 import com.soul.laptopkade.model.CartItem;
 import com.soul.laptopkade.model.Laptop;
+import com.soul.laptopkade.model.Order;
+import com.soul.laptopkade.model.OrderItem;
+import com.soul.laptopkade.model.User;
 import com.soul.laptopkade.repository.LaptopRepository;
+import com.soul.laptopkade.repository.OrderRepository;
+import com.soul.laptopkade.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
@@ -21,10 +26,14 @@ import java.util.Optional;
 public class CartController {
 
     private final LaptopRepository laptopRepository;
+    private final OrderRepository orderRepository;
+    private final UserRepository userRepository;
     private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 
-    public CartController(LaptopRepository laptopRepository) {
+    public CartController(LaptopRepository laptopRepository, OrderRepository orderRepository, UserRepository userRepository) {
         this.laptopRepository = laptopRepository;
+        this.orderRepository = orderRepository;
+        this.userRepository = userRepository;
     }
 
     @SuppressWarnings("unchecked")
@@ -114,8 +123,37 @@ public class CartController {
             return "redirect:/cart";
         }
         double total = cart.values().stream().mapToDouble(CartItem::getTotal).sum();
-        logger.info("CHECKOUT operation: Purchased {} items totaling ${} (sessionId={})", cart.size(), total, session.getId());
-        logger.info("CHECKOUT details: name='{}', phone='{}', address='{}', city='{}', postal='{}'", fullName, phone, address, city, postalCode);
+
+        // Build order entity
+        Order order = new Order();
+        order.setFullName(fullName);
+        order.setPhone(phone);
+        order.setAddress(address);
+        order.setCity(city);
+        order.setPostalCode(postalCode);
+        order.setTotal(total);
+        order.setStatus("NEW");
+
+        Object sessUser = session.getAttribute("loggedInUser");
+        if (sessUser instanceof User) {
+            User u = (User) sessUser;
+            userRepository.findById(u.getId()).ifPresent(order::setUser);
+        }
+
+        for (CartItem ci : cart.values()) {
+            OrderItem oi = new OrderItem();
+            oi.setLaptopId(ci.getLaptopId());
+            oi.setName(ci.getName());
+            oi.setBrand(ci.getBrand());
+            oi.setUnitPrice(ci.getNumericPrice());
+            oi.setQuantity(ci.getQuantity());
+            order.addItem(oi);
+        }
+
+        orderRepository.save(order);
+
+        logger.info("CHECKOUT persisted order id={} items={} total={} (sessionId={})", order.getId(), order.getItems().size(), order.getTotal(), session.getId());
+
         // Clear cart
         cart.clear();
         session.setAttribute("cart", cart);

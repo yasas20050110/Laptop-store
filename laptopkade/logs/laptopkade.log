@@ -534,3 +534,123 @@
 2025-11-14 14:40:24.289 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-14 14:40:24.294 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-14 14:40:24.298 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-14 14:41:15.832 [main] INFO  c.s.laptopkade.LaptopkadeApplication - Starting LaptopkadeApplication v0.0.1-SNAPSHOT using Java 25.0.1 with PID 1696 (D:\springboot_project\Laptop-store\laptopkade\target\laptopkade-0.0.1-SNAPSHOT.jar started by YASAS in D:\springboot_project\Laptop-store\laptopkade)
+2025-11-14 14:41:15.835 [main] INFO  c.s.laptopkade.LaptopkadeApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-14 14:41:16.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-14 14:41:16.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2025-11-14 14:41:17.366 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2025-11-14 14:41:17.380 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2025-11-14 14:41:17.381 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-14 14:41:17.382 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-14 14:41:17.415 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-14 14:41:17.416 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1493 ms
+2025-11-14 14:41:17.622 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-14 14:41:17.683 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-14 14:41:17.720 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-14 14:41:18.126 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-14 14:41:18.163 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-14 14:41:18.370 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:laptopdb user=SA
+2025-11-14 14:41:18.371 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-14 14:41:18.427 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-14 14:41:19.320 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-14 14:41:19.366 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 14:41:19.884 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-14 14:41:21.122 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-14 14:41:21.706 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-11-14 14:41:21.711 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-11-14 14:41:22.917 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:laptopdb'
+2025-11-14 14:41:23.127 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2025-11-14 14:41:23.188 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2025-11-14 14:41:23.227 [main] INFO  c.s.laptopkade.LaptopkadeApplication - Started LaptopkadeApplication in 7.941 seconds (process running for 8.584)
+2025-11-14 14:41:41.306 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-14 14:41:41.307 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-14 14:41:41.310 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-11-14 14:41:41.379 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:41:41.423 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:41:55.416 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:41:55.420 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:42:17.833 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:42:17.835 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:45:37.715 [http-nio-8085-exec-10] INFO  c.s.l.controller.AuthController - USER_REGISTRATION: New user registered: username='admin', email='yasas@gmail.com'
+2025-11-14 14:45:51.079 [http-nio-8085-exec-4] INFO  c.s.l.controller.AuthController - USER_LOGIN: User 'admin' logged in successfully
+2025-11-14 14:45:51.085 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:45:51.088 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:45:59.240 [http-nio-8085-exec-9] INFO  c.s.l.controller.AuthController - USER_LOGOUT: User 'admin' logged out
+2025-11-14 14:45:59.246 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:45:59.250 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:47:59.722 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:47:59.725 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 5 laptops
+2025-11-14 14:48:34.901 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:48:34.904 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 5 laptops
+2025-11-14 14:55:04.117 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:55:04.123 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 5 laptops
+2025-11-14 15:08:01.697 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-14 15:08:01.720 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-14 15:08:01.724 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 15:08:01.733 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-14 15:08:01.735 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-14 15:09:43.700 [main] INFO  c.s.laptopkade.LaptopkadeApplication - Starting LaptopkadeApplication using Java 25.0.1 with PID 2736 (D:\springboot_project\Laptop-store\laptopkade\target\classes started by YASAS in D:\springboot_project\Laptop-store\laptopkade)
+2025-11-14 15:09:43.701 [main] INFO  c.s.laptopkade.LaptopkadeApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-14 15:09:44.135 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-14 15:09:44.194 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2025-11-14 15:09:44.653 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2025-11-14 15:09:44.664 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2025-11-14 15:09:44.666 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-14 15:09:44.667 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-14 15:09:44.712 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-14 15:09:44.713 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 975 ms
+2025-11-14 15:09:44.833 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-14 15:09:44.868 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-14 15:09:44.889 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-14 15:09:45.074 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-14 15:09:45.101 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-14 15:09:45.218 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:laptopdb user=SA
+2025-11-14 15:09:45.220 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-14 15:09:45.263 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-14 15:09:45.875 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-14 15:09:45.923 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 15:09:46.157 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-14 15:09:46.700 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-14 15:09:46.840 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-11-14 15:09:46.841 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-11-14 15:09:47.046 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:laptopdb'
+2025-11-14 15:09:47.102 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2025-11-14 15:09:47.119 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2025-11-14 15:09:47.125 [main] INFO  c.s.laptopkade.LaptopkadeApplication - Started LaptopkadeApplication in 3.73 seconds (process running for 4.088)
+2025-11-14 15:09:53.272 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-14 15:09:53.273 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-14 15:09:53.274 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-14 15:09:53.357 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:09:53.382 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:10:03.086 [http-nio-8085-exec-10] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=4D899ECBF1E9A346B10ACF817155090E)
+2025-11-14 15:10:03.098 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:10:03.100 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:10:05.891 [http-nio-8085-exec-4] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 2 qty 1 to cart (sessionId=4D899ECBF1E9A346B10ACF817155090E)
+2025-11-14 15:10:05.899 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:10:05.902 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:10:35.215 [http-nio-8085-exec-10] INFO  c.s.l.controller.CartController - CHECKOUT persisted order id=1 items=2 total=2198.0 (sessionId=4D899ECBF1E9A346B10ACF817155090E)
+2025-11-14 15:10:35.222 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:10:35.224 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:10:55.850 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:10:55.853 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:11:15.702 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:11:15.705 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:15:02.424 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-14 15:15:02.444 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-14 15:15:02.449 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 15:15:02.454 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-14 15:15:02.456 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

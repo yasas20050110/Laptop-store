@@ -47,6 +47,7 @@
                 </div>
                 <div sec:authorize="hasRole('ADMIN')">
                     <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/laptops/new}">+ Add Laptop</a>
+                    <a class="btn btn-outline-light btn-sm mt-2 ms-2" th:href="@{/admin/orders}">📋 Manage Orders</a>
                     <small class="d-block text-white mt-2" style="opacity: 0.9;">
                         <a th:href="@{/logout}" style="color: white; text-decoration: none;">🔑 Admin Logout</a>
                     </small>
