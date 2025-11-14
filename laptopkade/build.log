@@ -1,0 +1,47 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Users/YASAS/.m2/wrapper/dists/apache-maven-3.9.11/03d7e36a140982eea48e22c1dcac01d8862b2550b2939e09a0809bbc5182a5bc/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.soul:laptopkade >-------------------------
+[INFO] Building laptopkade 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ laptopkade ---
+[INFO] Deleting D:\springboot_project\Laptop-store\laptopkade\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ laptopkade ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 15 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ laptopkade ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 10 source files with javac [debug parameters release 21] to target\classes
+[WARNING] /D:/springboot_project/Laptop-store/laptopkade/src/main/java/com/soul/laptopkade/config/SecurityConfig.java:[91,13] csrf() in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[INFO] /D:/springboot_project/Laptop-store/laptopkade/src/main/java/com/soul/laptopkade/config/SecurityConfig.java: D:\springboot_project\Laptop-store\laptopkade\src\main\java\com\soul\laptopkade\config\SecurityConfig.java uses or overrides a deprecated API.
+[INFO] /D:/springboot_project/Laptop-store/laptopkade/src/main/java/com/soul/laptopkade/config/SecurityConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ laptopkade ---
+[INFO] skip non existing resourceDirectory D:\springboot_project\Laptop-store\laptopkade\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ laptopkade ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ laptopkade ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ laptopkade ---
+[INFO] Building jar: D:\springboot_project\Laptop-store\laptopkade\target\laptopkade-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.7:repackage (repackage) @ laptopkade ---
+[INFO] Replacing main artifact D:\springboot_project\Laptop-store\laptopkade\target\laptopkade-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\springboot_project\Laptop-store\laptopkade\target\laptopkade-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.995 s
+[INFO] Finished at: 2025-11-14T13:33:41+05:30
+[INFO] ------------------------------------------------------------------------

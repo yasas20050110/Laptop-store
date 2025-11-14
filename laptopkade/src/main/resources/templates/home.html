@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,15 @@
             <div class="mt-3 mt-md-0 text-md-end">
                 <small class="d-block">Open now</small>
                 <small class="d-block">Free shipping over $500</small>
-                <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/laptops/new}">Add Laptop</a>
+                <div sec:authorize="hasRole('ADMIN')">
+                    <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/laptops/new}">+ Add Laptop</a>
+                    <small class="d-block text-white mt-2" style="opacity: 0.9;">
+                        <a th:href="@{/logout}" style="color: white; text-decoration: none;">Logout</a>
+                    </small>
+                </div>
+                <div sec:authorize="!hasRole('ADMIN')">
+                    <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/login}">🔐 Admin Login</a>
+                </div>
             </div>
         </div>
     </div>
