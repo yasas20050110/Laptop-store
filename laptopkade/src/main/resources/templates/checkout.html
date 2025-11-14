@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout - Laptop Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container py-5">
+    <div class="header-card mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-0">Checkout</h1>
+            <a class="btn btn-light" th:href="@{/cart}">Back to Cart</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card p-4">
+                <form th:action="@{/checkout}" method="post">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full name</label>
+                        <input id="fullName" name="fullName" class="form-control" placeholder="John Doe" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone number</label>
+                        <input id="phone" name="phone" class="form-control" placeholder="+1 555 555 5555" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input id="address" name="address" class="form-control" placeholder="123 Main St" required />
+                    </div>
+
+                    <div class="row gx-2">
+                        <div class="col-md-6 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input id="city" name="city" class="form-control" placeholder="City" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="postalCode" class="form-label">Postal code</label>
+                            <input id="postalCode" name="postalCode" class="form-control" placeholder="12345" required />
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Confirm & Pay</button>
+                        <a th:href="@{/cart}" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -36,3 +36,32 @@
 2025-11-14 14:06:48.118 [http-nio-8085-exec-5] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
 2025-11-14 14:08:16.618 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation: Searching for laptops with query: 'chec'
 2025-11-14 14:08:16.649 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - SEARCH operation successful: Found 0 laptops matching 'chec'
+2025-11-14 14:11:21.786 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:11:21.820 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:11:26.206 [http-nio-8085-exec-9] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=B6B6D8F52D067B7063E78C6FBDA3B8F8)
+2025-11-14 14:11:26.217 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:11:26.220 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:11:38.416 [http-nio-8085-exec-9] INFO  c.s.l.controller.CartController - CART operation: Removed laptop id 1 from cart (sessionId=B6B6D8F52D067B7063E78C6FBDA3B8F8)
+2025-11-14 14:15:09.792 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:15:09.796 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:15:13.256 [http-nio-8085-exec-10] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 2 qty 1 to cart (sessionId=B6B6D8F52D067B7063E78C6FBDA3B8F8)
+2025-11-14 14:15:13.262 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:15:13.265 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:15:14.038 [http-nio-8085-exec-7] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=B6B6D8F52D067B7063E78C6FBDA3B8F8)
+2025-11-14 14:15:14.044 [http-nio-8085-exec-9] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:15:14.047 [http-nio-8085-exec-9] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:15:17.355 [http-nio-8085-exec-9] INFO  c.s.l.controller.CartController - CHECKOUT operation: Purchased 2 items totaling $2198.0 (sessionId=B6B6D8F52D067B7063E78C6FBDA3B8F8)
+2025-11-14 14:15:17.361 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:15:17.365 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:22:51.269 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:22:51.301 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:22:58.311 [http-nio-8085-exec-6] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=E002159B274A031BEF206CF198CE7B37)
+2025-11-14 14:22:58.318 [http-nio-8085-exec-7] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:22:58.322 [http-nio-8085-exec-7] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:23:00.438 [http-nio-8085-exec-2] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 4 qty 1 to cart (sessionId=E002159B274A031BEF206CF198CE7B37)
+2025-11-14 14:23:00.445 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:23:00.450 [http-nio-8085-exec-4] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 14:23:50.039 [http-nio-8085-exec-6] INFO  c.s.l.controller.CartController - CHECKOUT operation: Purchased 2 items totaling $1848.0 (sessionId=E002159B274A031BEF206CF198CE7B37)
+2025-11-14 14:23:50.040 [http-nio-8085-exec-6] INFO  c.s.l.controller.CartController - CHECKOUT details: name='yasas sanjaya', phone='01141442832', address='kolongolla monaragala', city='monaragala', postal=' 9600'
+2025-11-14 14:23:50.046 [http-nio-8085-exec-7] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 14:23:50.051 [http-nio-8085-exec-7] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops

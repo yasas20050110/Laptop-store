@@ -89,13 +89,34 @@ public class CartController {
 
     @PostMapping("/cart/checkout")
     public String checkout(HttpSession session) {
+        // kept for compatibility: redirect to checkout form
+        return "redirect:/checkout";
+    }
+
+    @GetMapping("/checkout")
+    public String showCheckoutForm(HttpSession session, Model model) {
+        Map<Long, CartItem> cart = getCart(session);
+        double total = cart.values().stream().mapToDouble(CartItem::getTotal).sum();
+        model.addAttribute("items", cart.values());
+        model.addAttribute("total", total);
+        return "checkout";
+    }
+
+    @PostMapping("/checkout")
+    public String processCheckout(@RequestParam("fullName") String fullName,
+                                  @RequestParam("phone") String phone,
+                                  @RequestParam("address") String address,
+                                  @RequestParam("city") String city,
+                                  @RequestParam("postalCode") String postalCode,
+                                  HttpSession session) {
         Map<Long, CartItem> cart = getCart(session);
         if (cart.isEmpty()) {
             return "redirect:/cart";
         }
-        // In real app: process payment, create order, etc. Here we simulate purchase and clear cart
         double total = cart.values().stream().mapToDouble(CartItem::getTotal).sum();
         logger.info("CHECKOUT operation: Purchased {} items totaling ${} (sessionId={})", cart.size(), total, session.getId());
+        logger.info("CHECKOUT details: name='{}', phone='{}', address='{}', city='{}', postal='{}'", fullName, phone, address, city, postalCode);
+        // Clear cart
         cart.clear();
         session.setAttribute("cart", cart);
         return "redirect:/home";

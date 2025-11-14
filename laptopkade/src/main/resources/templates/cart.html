@@ -46,9 +46,9 @@
                     <strong>Total</strong>
                     <strong th:text="${total}">$0</strong>
                 </div>
-                <form th:action="@{/cart/checkout}" method="post" class="mt-3">
-                    <button type="submit" class="btn btn-primary w-100" th:disabled="${#lists.isEmpty(items)}">Checkout</button>
-                </form>
+                <div class="mt-3">
+                    <a th:href="@{/checkout}" class="btn btn-primary w-100" th:classappend="${#lists.isEmpty(items)} ? ' disabled' : ''">Checkout</a>
+                </div>
             </div>
         </div>
     </div>
