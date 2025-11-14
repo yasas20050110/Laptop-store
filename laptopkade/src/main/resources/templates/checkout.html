@@ -18,31 +18,54 @@
 
     <div class="row">
         <div class="col-md-8 mx-auto">
+            <div class="card p-4 mb-4" th:if="${session.loggedInUser == null}">
+                <p class="text-muted">
+                    <strong>Tip:</strong> 
+                    <a th:href="@{/user-login}">Sign in</a> or 
+                    <a th:href="@{/register}">create an account</a> to auto-fill your information.
+                </p>
+            </div>
+
             <div class="card p-4">
                 <form th:action="@{/checkout}" method="post">
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Full name</label>
-                        <input id="fullName" name="fullName" class="form-control" placeholder="John Doe" required />
+                        <input id="fullName" name="fullName" class="form-control" 
+                               placeholder="John Doe" 
+                               th:value="${session.loggedInUser != null ? session.loggedInUser.username : ''}"
+                               required />
                     </div>
 
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone number</label>
-                        <input id="phone" name="phone" class="form-control" placeholder="+1 555 555 5555" required />
+                        <input id="phone" name="phone" class="form-control" 
+                               placeholder="+1 555 555 5555"
+                               th:value="${session.loggedInUser != null ? session.loggedInUser.phone : ''}"
+                               required />
                     </div>
 
                     <div class="mb-3">
                         <label for="address" class="form-label">Address</label>
-                        <input id="address" name="address" class="form-control" placeholder="123 Main St" required />
+                        <input id="address" name="address" class="form-control" 
+                               placeholder="123 Main St"
+                               th:value="${session.loggedInUser != null ? session.loggedInUser.address : ''}"
+                               required />
                     </div>
 
                     <div class="row gx-2">
                         <div class="col-md-6 mb-3">
                             <label for="city" class="form-label">City</label>
-                            <input id="city" name="city" class="form-control" placeholder="City" required />
+                            <input id="city" name="city" class="form-control" 
+                                   placeholder="City"
+                                   th:value="${session.loggedInUser != null ? session.loggedInUser.city : ''}"
+                                   required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="postalCode" class="form-label">Postal code</label>
-                            <input id="postalCode" name="postalCode" class="form-control" placeholder="12345" required />
+                            <input id="postalCode" name="postalCode" class="form-control" 
+                                   placeholder="12345"
+                                   th:value="${session.loggedInUser != null ? session.loggedInUser.postalCode : ''}"
+                                   required />
                         </div>
                     </div>
 

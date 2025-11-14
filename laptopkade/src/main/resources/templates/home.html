@@ -48,11 +48,20 @@
                 <div sec:authorize="hasRole('ADMIN')">
                     <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/laptops/new}">+ Add Laptop</a>
                     <small class="d-block text-white mt-2" style="opacity: 0.9;">
-                        <a th:href="@{/logout}" style="color: white; text-decoration: none;">Logout</a>
+                        <a th:href="@{/logout}" style="color: white; text-decoration: none;">🔑 Admin Logout</a>
                     </small>
                 </div>
                 <div sec:authorize="!hasRole('ADMIN')">
                     <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/login}">🔐 Admin Login</a>
+                </div>
+                <!-- Customer Auth Section -->
+                <div th:if="${session.loggedInUser != null}" class="mt-3">
+                    <small class="d-block text-white" style="opacity: 0.9;">Welcome, <strong th:text="${session.loggedInUser.username}">User</strong></small>
+                    <a class="btn btn-outline-light btn-sm mt-2" th:href="@{/user-logout}">👤 Logout</a>
+                </div>
+                <div th:if="${session.loggedInUser == null}" class="mt-3">
+                    <a class="btn btn-outline-light btn-sm" th:href="@{/user-login}">👤 Login</a>
+                    <a class="btn btn-outline-light btn-sm ms-2" th:href="@{/register}">📝 Register</a>
                 </div>
             </div>
         </div>

@@ -72,11 +72,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-        .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/login", "/", "/home", "/search", "/css/**", "/images/**", "/js/**", "/cart", "/cart/**", "/checkout").permitAll()
-            .requestMatchers("/laptops/new", "/laptops").hasRole("ADMIN")
-            .anyRequest().authenticated()
-        )
+            .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/login", "/", "/home", "/search", "/css/**", "/images/**", "/js/**", "/cart", "/cart/**", "/checkout", "/register", "/user-login").permitAll()
+                    .requestMatchers("/laptops/new", "/laptops").hasRole("ADMIN")
+                    .anyRequest().permitAll()
+            )
             .formLogin(form -> form
                     .loginPage("/login")
                     .loginProcessingUrl("/authenticate")
