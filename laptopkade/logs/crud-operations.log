@@ -111,3 +111,25 @@
 2025-11-14 15:10:55.853 [http-nio-8085-exec-6] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
 2025-11-14 15:11:15.702 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
 2025-11-14 15:11:15.705 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:15:48.584 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:15:48.605 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:15:54.991 [http-nio-8085-exec-2] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 1 qty 1 to cart (sessionId=27531A1B9FFC21391CF0B464DF6B615D)
+2025-11-14 15:15:55.002 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:15:55.004 [http-nio-8085-exec-8] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:15:56.141 [http-nio-8085-exec-4] INFO  c.s.l.controller.CartController - CART operation: Added laptop id 2 qty 1 to cart (sessionId=27531A1B9FFC21391CF0B464DF6B615D)
+2025-11-14 15:15:56.150 [http-nio-8085-exec-5] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:15:56.153 [http-nio-8085-exec-5] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:16:23.880 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:16:23.882 [http-nio-8085-exec-10] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:16:50.285 [http-nio-8085-exec-6] INFO  c.s.l.controller.AuthController - USER_REGISTRATION: New user registered: username='yasas', email='yasas@gmail.com'
+2025-11-14 15:17:05.548 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:17:05.551 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:17:30.757 [http-nio-8085-exec-2] INFO  c.s.l.controller.AuthController - USER_REGISTRATION: New user registered: username='admin', email='admin@gmail.com'
+2025-11-14 15:17:38.236 [http-nio-8085-exec-10] INFO  c.s.l.controller.AuthController - USER_LOGIN: User 'admin' logged in successfully
+2025-11-14 15:17:38.254 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:17:38.256 [http-nio-8085-exec-1] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:18:14.012 [http-nio-8085-exec-9] INFO  c.s.l.controller.CartController - CHECKOUT persisted order id=1 items=2 total=2198.0 (sessionId=27531A1B9FFC21391CF0B464DF6B615D)
+2025-11-14 15:18:14.019 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:18:14.021 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
+2025-11-14 15:18:31.875 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation: Fetching all laptops from database
+2025-11-14 15:18:31.878 [http-nio-8085-exec-3] INFO  c.s.l.controller.HomeController - READ operation successful: Retrieved 4 laptops
