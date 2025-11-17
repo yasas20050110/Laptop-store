@@ -1,0 +1,45 @@
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------------< com.soul:api >----------------------------
+[INFO] Building soulapi 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ api ---
+[INFO] Deleting D:\springboot_project\Laptop-store\laptopkade_api\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ api ---
+[INFO] skip non existing resourceDirectory D:\springboot_project\Laptop-store\laptopkade_api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ api ---
+[INFO] Building jar: D:\springboot_project\Laptop-store\laptopkade_api\target\api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.7:repackage (repackage) @ api ---
+[INFO] Replacing main artifact D:\springboot_project\Laptop-store\laptopkade_api\target\api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\springboot_project\Laptop-store\laptopkade_api\target\api-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ api ---
+[INFO] Installing D:\springboot_project\Laptop-store\laptopkade_api\pom.xml to C:\Users\YASAS\.m2\repository\com\soul\api\0.0.1-SNAPSHOT\api-0.0.1-SNAPSHOT.pom
+[INFO] Installing D:\springboot_project\Laptop-store\laptopkade_api\target\api-0.0.1-SNAPSHOT.jar to C:\Users\YASAS\.m2\repository\com\soul\api\0.0.1-SNAPSHOT\api-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.342 s
+[INFO] Finished at: 2025-11-16T17:53:37+05:30
+[INFO] ------------------------------------------------------------------------
