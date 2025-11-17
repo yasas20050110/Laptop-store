@@ -4,7 +4,9 @@ import com.soul.api.dto.JwtResponse;
 import com.soul.api.dto.LoginRequest;
 import com.soul.api.dto.SignupRequest;
 import com.soul.api.exception.ResourceNotFoundException;
+import com.soul.api.model.Token;
 import com.soul.api.model.User;
+import com.soul.api.repository.TokenRepository;
 import com.soul.api.repository.UserRepository;
 import com.soul.api.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 
 @Service
 @Transactional
@@ -20,6 +24,9 @@ public class AuthService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private TokenRepository tokenRepository;
 
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
@@ -93,6 +100,23 @@ public class AuthService {
         String token = jwtTokenProvider.generateToken(user.getUsername(), user.getEmail());
         long expirationTime = jwtTokenProvider.getExpirationTime();
 
+        // Save token to database
+        Token tokenEntity = new Token();
+        tokenEntity.setTokenValue(token);
+        tokenEntity.setUser(user);
+        tokenEntity.setTokenType("Bearer");
+        tokenEntity.setRevoked(false);
+        
+        // Convert expiration time to LocalDateTime
+        LocalDateTime expiresAt = new Date(System.currentTimeMillis() + expirationTime)
+                .toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDateTime();
+        tokenEntity.setExpiresAt(expiresAt);
+        tokenEntity.setIssuedAt(LocalDateTime.now());
+        
+        tokenRepository.save(tokenEntity);
+
         return new JwtResponse(token, expirationTime, user.getUsername(), user.getEmail());
     }
 
@@ -111,5 +135,23 @@ public class AuthService {
     @Transactional(readOnly = true)
     public boolean validateToken(String token) {
         return jwtTokenProvider.validateToken(token);
+    }
+
+    /**
+     * Revoke a token
+     */
+    public void revokeToken(String token) {
+        Token tokenEntity = tokenRepository.findByTokenValue(token)
+                .orElseThrow(() -> new ResourceNotFoundException("Token", "value", token));
+        tokenEntity.setRevoked(true);
+        tokenRepository.save(tokenEntity);
+    }
+
+    /**
+     * Get all active tokens for a user
+     */
+    @Transactional(readOnly = true)
+    public java.util.List<Token> getUserActiveTokens(Long userId) {
+        return tokenRepository.findByUserIdAndRevokedFalse(userId);
     }
 }
